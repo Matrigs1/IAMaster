@@ -1,9 +1,13 @@
 from openai import OpenAI
-from creds import API_KEY
+from dotenv import load_dotenv
+import os
+
+def configure():
+    load_dotenv()
 
 # Autenticação da conta.
 client = OpenAI(
-    api_key=API_KEY,
+    api_key=os.getenv('api_key'),
 )
 
 message = client.chat.completions.create(
