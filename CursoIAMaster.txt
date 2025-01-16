@@ -1,0 +1,14 @@
+MyAPIKey = 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
+ 
+minha-chave-api = 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
+ 
+Large Language Models (LLM's): Modelos de inteligência artificial generativa, com alta escala de processamento de dados. Feitos para interação com seres humanos. Ex: ChatGPT, Lhama, Claude, Gemini.
+
+A OpenIA desenvolveu uma biblioteca dentro do Python que facilita a integração com sistemas, seu nome é 'openai'.
+
+Nela é feita a autenticação do usuário com a API Key, depois, montamos um 'client' com o nosso tipo de retorno de preferência, junto com o 'model' desejado, a 'role' de quem estará fazendo o prompt e, o 'content', que é o conteúdo em si do prompt.
+
+Se a propriedade stream não for passada como True, a resposta será aguardada e mostrada completamente. Caso contrário, é possível mostrar a resposta em pequenas partes, assim como é feito no ChatGPT.
+
+Além da 'role' como user, podemos também passar como sistema, fornecendo um contexto para a Inteligência Artificial. Em sistema, podemos pedir por uma expertise ou, passar dados de uma base, para que as respostas do 'Agent', sejam agora com base nesses dados.
+
