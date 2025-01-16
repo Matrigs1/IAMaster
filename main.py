@@ -5,9 +5,11 @@ import os
 def configure():
     load_dotenv()
 
+configure()
+
 # Autenticação da conta.
 client = OpenAI(
-    api_key=os.getenv('api_key'),
+    api_key=os.getenv('OPENAI_API_KEY'),
 )
 
 message = client.chat.completions.create(
