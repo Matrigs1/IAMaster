@@ -1,8 +1,9 @@
 from openai import OpenAI
+from creds import API_KEY
 
 # Autenticação da conta.
 client = OpenAI(
-    api_key='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',
+    api_key=API_KEY,
 )
 
 message = client.chat.completions.create(
