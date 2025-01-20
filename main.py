@@ -17,14 +17,16 @@ message = client.chat.completions.create(
     # Prompt como usuário.
     messages = [
         {
-            'role': 'system', 'content': 'Dê respostas técnicas sobre programação. Se comporte como um programador Python experiente especialista em padrões de projetos e arquitetura limpa.' # Dando um contexto a IA, que irá retornar informações mais apuradas.
+            'role': 'system',
+            'content': 'Você será um tradutor de textos de português para inglês. Apenas traduza e responda a tradução do texto que receber.' # Dando um contexto a IA, que irá retornar informações mais apuradas.
         },
         {
             'role': 'user',
-            'content': 'Me mostre como posso fazer um projeto Django com as melhores boas práticas.'
+            'content': 'O livro está na mesa.'
         }
     ],
-    stream = False # Automaticamente é False, o que faz com que a resposta seja gerada e, somente enviada após completamente formulada.
+    stream = False, # Automaticamente é False, o que faz com que a resposta seja gerada e, somente enviada após completamente formulada.
+    max_tokens=200,
 )
 
 print(message.choices[0].message.content)

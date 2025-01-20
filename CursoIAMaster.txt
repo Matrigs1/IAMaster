@@ -1,6 +1,6 @@
 MyAPIKey = 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
  
-minha-chave-api = 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
+minha-chave-api = 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
  
 Large Language Models (LLM's): Modelos de inteligência artificial generativa, com alta escala de processamento de dados. Feitos para interação com seres humanos. Ex: ChatGPT, Lhama, Claude, Gemini.
 
@@ -12,3 +12,6 @@ Se a propriedade stream não for passada como True, a resposta será aguardada e
 
 Além da 'role' como user, podemos também passar como sistema, fornecendo um contexto para a Inteligência Artificial. Em sistema, podemos pedir por uma expertise ou, passar dados de uma base, para que as respostas do 'Agent', sejam agora com base nesses dados.
 
+# Atributos customizados
+max_tokens = 150  # Limita a quantidade de tokens retornados pela resposta.
+temperature 0.2 = # Quanto maior a temperatura, mais randômica será a resposta. Para menores temperaturas, a resposta será mais direta.
