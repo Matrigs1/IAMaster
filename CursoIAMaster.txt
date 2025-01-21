@@ -15,3 +15,8 @@ Além da 'role' como user, podemos também passar como sistema, fornecendo um co
 # Atributos customizados
 max_tokens = 150  # Limita a quantidade de tokens retornados pela resposta.
 temperature 0.2 = # Quanto maior a temperatura, mais randômica será a resposta. Para menores temperaturas, a resposta será mais direta.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LangChain: Um framework/ecossistema para desenvolvimento de aplicações de inteligência artificial. Facilita e possibilita novos recursos para interação com LLM's e criação de aplicações com elas.
+
+
