@@ -1,10 +1,26 @@
 import os
-from langchain_openai import OpenAI
+from langchain_openai import OpenAI, ChatOpenAI
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 
-model = OpenAI()
+# model = OpenAI()
 
-model.invoke(
-    input=''
+# response = model.invoke(
+#     input='Quem foi Alan Turing?',
+#     temperature=1,
+#     max_tokens=500
+# )
+
+model = ChatOpenAI(
+    model='gpt-3.5-turbo',
+
 )
+
+messages = [
+    {'role': 'system', 'content': 'Você é um assistente que fornece informações sobre figuras históricas.'},
+    {'role': 'user', 'content': 'Quem foi Alan Turing?'}
+]
+
+response = model.invoke(messages)
+print(response)
+print(response.content)

@@ -1,7 +1,3 @@
-MyAPIKey = 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
- 
-minha-chave-api = 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
- 
 Large Language Models (LLM's): Modelos de inteligência artificial generativa, com alta escala de processamento de dados. Feitos para interação com seres humanos. Ex: ChatGPT, Lhama, Claude, Gemini.
 
 A OpenIA desenvolveu uma biblioteca dentro do Python que facilita a integração com sistemas, seu nome é 'openai'.
@@ -19,4 +15,13 @@ temperature 0.2 = # Quanto maior a temperatura, mais randômica será a resposta
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 LangChain: Um framework/ecossistema para desenvolvimento de aplicações de inteligência artificial. Facilita e possibilita novos recursos para interação com LLM's e criação de aplicações com elas.
 
+langchain_openai = É uma biblioteca da langchain integrada com a openai. Fornece abstração e facilidades na utilização da IA.
 
+Recursos de cache: 
+InMemoryCache() = Esse cache vai ficar em memória enquanto a aplicação estiver rodando. Se a execução parar, ele é perdido. Mas de todo modo, serve para minimizar perguntas e respostas repetidas e otimizar o custo do modelo.
+SQLiteCache = Esse tipo de cache irá persistir a resposta em um arquivo .db e, sempre que for chamado, independente se a aplicação for interrompida, buscará o prompt já enviado. Ex:
+set_llm_cache(
+    SQLiteCache(
+        database_path='openai_cache.db'
+    )
+)
