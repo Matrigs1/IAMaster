@@ -25,3 +25,10 @@ set_llm_cache(
         database_path='openai_cache.db'
     )
 )
+
+Templates de prompt:
+Com o langchain.prompts -> PromptTemplate, é possível criar templates de texto para passar ao modelo, utilizando objetos como interpolação.
+
+ChatPromptTemplate:
+É um método para utilizar a interação com a IA e, passar roles de um submódulo para ela. É melhor que utilizar apenas os nomes das roles de forma bruta. Também traz recursos extras.
+Roles = SystemMessage, HumanMessage, AIMessage.
