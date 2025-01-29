@@ -44,4 +44,13 @@ ajuda de seu próprio reconhecimento de texto e, de acordo com a pergunta, direc
 Cada chain, pode ser envolvido com um RAG, especializado em sua área.
 
 Loaders:
+Responsáveis por carregar bases de conhecimento, para serem utilizados pela IA.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Agents:
+São dinâmicos, adaptáveis e flexíveis. Capazes de executarem tarefas e altamente treinados no ambiente. São disponibilizadas ferramentas para a interação com o agente.
+
+Tools:
+São as ferramentas (libs) que disponibilizamos para os agentes. Existem ferramentas de busca na internet, interação com banco de dados, executar shell, executar códigos Python etc.
+
 
