@@ -32,3 +32,16 @@ Com o langchain.prompts -> PromptTemplate, é possível criar templates de texto
 ChatPromptTemplate:
 É um método para utilizar a interação com a IA e, passar roles de um submódulo para ela. É melhor que utilizar apenas os nomes das roles de forma bruta. Também traz recursos extras.
 Roles = SystemMessage, HumanMessage, AIMessage.
+
+Simple Chains:
+É uma sintaxe do langchain que permite encadear ações comuns e, que fazem sentido para o sistema. Exemplo: montar um prompt, enviar pro model e dar output da resposta; em vez de fazer isso em etapas separadas, é possível
+criar uma 'chain' para essas mesmas etapas.
+Como funciona: chain = prompt | model | StrOutputParser()
+
+Router Chain:
+Um 'roteador' de chains, que irá direcionar o fluxo de resposta para cada chain específica. Funciona como um 'controler', que vai pegar a pergunta do usuário, classificar ela com a 
+ajuda de seu próprio reconhecimento de texto e, de acordo com a pergunta, direcionar ele para a chain classificada. Ex: Pergunta -> Classificação por área ou setor da empresa -> Direcionamento -> Resposta de acordo com o direcionamento.
+Cada chain, pode ser envolvido com um RAG, especializado em sua área.
+
+Loaders:
+

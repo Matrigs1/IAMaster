@@ -26,3 +26,7 @@ chat_template = ChatPromptTemplate.from_messages(
     ]
 )
 
+prompt = chat_template.format_messages(regiao='Sul')
+
+response = model.invoke(prompt)
+print(response.content)
