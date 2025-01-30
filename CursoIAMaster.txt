@@ -53,4 +53,27 @@ São dinâmicos, adaptáveis e flexíveis. Capazes de executarem tarefas e altam
 Tools:
 São as ferramentas (libs) que disponibilizamos para os agentes. Existem ferramentas de busca na internet, interação com banco de dados, executar shell, executar códigos Python etc.
 
+Agents ativos na prática:
+A partir do módulo create_python_agent, da lib langchain_experimental.agents.agent_toolkits, podemos criar um agente que irá receber uma tool e, passar um prompt para ele utilizar em junção à tool.
+Utilizei em exemplo, a tool do Wikipedia, onde criei um prompt_template e a criação do agent ficou da seguinte forma:
+agent_executor = create_python_agent(
+    llm=model,               # Esse é o modelo que instânciamos do GPT, modelo que o agent irá utilizar.
+    tool=wikipedia_tool,     # Essa é a tool que nós designamos para o agent.
+    verbose=True             # Com essa opção setada, irá nos fornecer algumas informações extra, como: Ações (ferramenta utilizada, input dado), começo da chain, observações, término da chain etc.
+)
 
+Transformando funções do Python em Tools:
+Utlizando esse import de uma classe do langchain.agents: Tool, conseguimos instânciar um objeto com essa funcionalidade de Tool a partir de qualquer função ou código Python nativo.
+Esse constructor aceita um nome e uma descrição, ambos são importantes, pois o nome vamos passar para o model, a descrição o modelo vai utilizar para entender a Tool e, a função a ser executada.
+Exemplo:
+python_repl_tool = Tool(
+    name='Python REPL',
+    description=
+        'Um shell Python. Use isso para executar código Python. Execute apenas códigos Python válidos.'
+        'Se você precisar obter o retorno do código, use a função "print(...)".',
+    func=python_repl.run        # python_repl nesse caso, é uma instância da classe PythonREPL(), que executa código nativo. Basicamente estamos passando código nativo como uma Tool para a IA.
+)
+
+
+Agents reativos:
+Não irá ter apenas uma tool para trabalhar e o uso de cada uma delas é avaliado pelo próprio.
