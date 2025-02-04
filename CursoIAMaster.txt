@@ -77,3 +77,6 @@ python_repl_tool = Tool(
 
 Agents reativos:
 Não irá ter apenas uma tool para trabalhar e o uso de cada uma delas é avaliado pelo próprio.
+
+Toolkit:
+É um kit de ferramentas, que disponibiliza várias ferramentas pro agente.
